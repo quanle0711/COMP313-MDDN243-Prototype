@@ -180,6 +180,7 @@ GameObject:
   - component: {fileID: 396633781}
   - component: {fileID: 396633780}
   - component: {fileID: 396633779}
+  - component: {fileID: 396633783}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -252,6 +253,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &396633783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396633778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ac79977400e244ffb54e67fd1042dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &509709590
 Prefab:
   m_ObjectHideFlags: 0
@@ -844,7 +856,7 @@ GameObject:
   - component: {fileID: 906354226}
   m_Layer: 0
   m_Name: Buttons
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
