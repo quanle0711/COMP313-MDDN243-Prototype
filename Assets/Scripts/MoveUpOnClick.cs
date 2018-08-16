@@ -9,8 +9,11 @@ public class MoveUpOnClick : MonoBehaviour {
 	private Vector3 destination;
 	private float randHeight;
 	void Start () {
-		randHeight = Random.Range (2f, 5f);
-		//random height between 2 and 5;
+        speed = 10;
+        minHeight = 1;
+
+		randHeight = Random.Range (1f, 3f);
+		//random height between 1 and 2;
 		transform.localScale = new Vector3 (1f,randHeight * 10f,1f);
 		destination = transform.parent.position + new Vector3 (0,(randHeight/2), 0);
 	}
