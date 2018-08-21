@@ -11,11 +11,7 @@ public class ButtonInitialize : MonoBehaviour {
                 GameObject button = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 button.transform.localScale = new Vector3(2f, 0.2f, 2f);
                 button.transform.Translate(-6f + (4.0f * row), 5.35f, -6f + (4.0f * col));
-                //script temp = Resources.Load("Scripts/ClickButton") as script;
-                //script sc = button.AddComponent<script>() as script;
-                button.AddComponent<SubGold>();
                 button.AddComponent<ClickButton>();
-                
 
                 //add button to parent
                 button.transform.parent = transform;
