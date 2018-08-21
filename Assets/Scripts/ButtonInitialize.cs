@@ -13,8 +13,9 @@ public class ButtonInitialize : MonoBehaviour {
                 button.transform.Translate(-6f + (4.0f * row), 5.35f, -6f + (4.0f * col));
                 //script temp = Resources.Load("Scripts/ClickButton") as script;
                 //script sc = button.AddComponent<script>() as script;
+                button.AddComponent<SubGold>();
                 button.AddComponent<ClickButton>();
-               
+                
 
                 //add button to parent
                 button.transform.parent = transform;
