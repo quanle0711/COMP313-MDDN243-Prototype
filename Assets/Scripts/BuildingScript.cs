@@ -13,16 +13,18 @@ public class BuildingScript : MonoBehaviour {
     private float randHeight;
     //display hit points
     private int hitpoints;
-    private GameObject HPText;
+	private GameObject Panic;
 
     void Start()
     {
         speed = 10;
         minHeight = 1;
-        Create3DText();
-        hitpoints = 300;
-        HPText.GetComponent<TextMesh>().text = hitpoints.ToString();
-        randHeight = Random.Range(1f, 2f);
+		hitpoints = 250;
+
+		Panic = GameObject.FindGameObjectWithTag ("PanicCount");
+
+		//animation for buildings
+		randHeight = Random.Range(1f, 2f);
         //random height between 1 and 2;
         transform.localScale = new Vector3(1f, randHeight * 10f, 1f);
         destination = transform.parent.position + new Vector3(0, (randHeight), 0);
@@ -44,14 +46,16 @@ public class BuildingScript : MonoBehaviour {
 
     }
 
-    private void OnTriggerStay(Collider other)
+	private void OnCollisionEnter(Collision other)
     {
-        hitpoints--;
-        HPText.GetComponent<TextMesh>().text = hitpoints.ToString();
-        if (hitpoints < 0) {
+        hitpoints -= 50;
+		changeColorHP ();
+        if (hitpoints == 0) {
             transform.parent.GetComponent<Renderer>().enabled = true;
+			Panic.GetComponent<PanicScript> ().addPanic (10);
             DestroyObject(gameObject);           
         }
+		if(other.gameObject.CompareTag("Giant"))other.gameObject.GetComponent<Rigidbody> ().AddForce(5000,0,5000,ForceMode.Impulse);
     }
 
     void IncrementPosition()
@@ -64,11 +68,15 @@ public class BuildingScript : MonoBehaviour {
         // Move the object to the next position
         gameObject.transform.position = nextPosition;
     }
-
-    private void Create3DText()
-    {
-        HPText = new GameObject("myText");
-        HPText.AddComponent<TextMesh>();
-        HPText.transform.parent = transform;
-    }
+		
+	void changeColorHP() {
+		Renderer rd = GetComponent<Renderer> ();
+		if (hitpoints == 250) {
+			rd.material.color = Color.yellow;
+		} else if (hitpoints == 150) {
+			rd.material.color = Color.magenta;
+		} else if (hitpoints == 50) {
+			rd.material.color = Color.red;
+		}
+	}
 }

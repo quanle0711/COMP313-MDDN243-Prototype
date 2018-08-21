@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8987151, g: 0.79820144, b: 0.9534083, a: 1}
+  m_IndirectSpecularColor: {r: 1.2406731, g: 0.35796452, b: 1.5785311, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 3
     agentHeight: 4
     agentSlope: 45
     agentClimb: 3.5
@@ -103,7 +103,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 3
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 1
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -493,7 +493,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: 190, z: 0}
 --- !u!1 &507725402
 GameObject:
@@ -1015,7 +1015,7 @@ GameObject:
   - component: {fileID: 1350054793}
   m_Layer: 0
   m_Name: Giant
-  m_TagString: Untagged
+  m_TagString: Giant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1127,9 +1127,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1350054786}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 0.05
+  m_Mass: 50
+  m_Drag: 10
+  m_AngularDrag: 0.02
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1198,7 +1198,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: 86, z: 0}
 --- !u!1 &1757011871
 GameObject:
@@ -1447,9 +1447,10 @@ GameObject:
   - component: {fileID: 2104318818}
   - component: {fileID: 2104318817}
   - component: {fileID: 2104318816}
+  - component: {fileID: 2104318820}
   m_Layer: 5
   m_Name: PanicCounter
-  m_TagString: Untagged
+  m_TagString: PanicCount
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1539,3 +1540,16 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2104318814}
+--- !u!114 &2104318820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2104318814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed575d889f7fa8e43b889ba0879d11a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panic: 0
+  panicText: {fileID: 2104318818}

@@ -13,7 +13,9 @@ public class ClickButton : MonoBehaviour {
             GameObject building = GameObject.CreatePrimitive(PrimitiveType.Cube);
             building.transform.Translate(transform.position);
             building.AddComponent<BuildingScript>();
-            building.GetComponent<Collider>().isTrigger = true;
+            building.GetComponent<Collider>().isTrigger = false;
+			building.AddComponent<Rigidbody> ();
+			building.GetComponent<Rigidbody> ().isKinematic = true;
 
             // Assigns a material named "Assets/Resources/DEV_Orange" to the object.
             Renderer newMat = building.GetComponent<Renderer>();
