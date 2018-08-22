@@ -5,17 +5,22 @@ using UnityEngine;
 
 public class AddGold : MonoBehaviour {
     
-    public GameObject goldHold; 
-
-	// Use this for initialization
-	void Start () {
+    public GameObject goldHold;
+    public GameObject panicHold;
+    private int goldToAdd;
+    // Use this for initialization
+    void Start () {
+        goldToAdd = 5;
         InvokeRepeating("passiveCount", 1f, 1f);
 	}
 	
 	// Update is called once per frame
-	void Update () {   
+	void Update () {
+        if (panicHold.GetComponent<PanicScript>().panic >= 50) {
+            goldToAdd = 10;
+        }       
 	}
     void passiveCount () {
-        goldHold.GetComponent<GoldScript>().addGold(5);
+        goldHold.GetComponent<GoldScript>().addGold(goldToAdd);
     }
 }

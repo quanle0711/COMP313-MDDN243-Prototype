@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PanicScript : MonoBehaviour {
@@ -17,7 +18,10 @@ public class PanicScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
-
+        if (panic >= 100)
+        {
+            SceneManager.LoadScene("Lose");
+        }
 	}
 
 	public void addPanic(int p)
