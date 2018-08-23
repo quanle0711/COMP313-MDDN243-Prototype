@@ -1,6 +1,7 @@
 # COMP313-MDDN243-Prototype
 
-## Assets used and imported: Post Processing Stack
+## Assets used and imported: Post Processing-Stack (unity asset store)
+## Unity3D 5.6.3f1 used!!! important!!!
 
 ## Highlight: Enemy(Giant) AI
 used a mixture of Navmesh and Vector components, the Giant NPC can detect, move towards and attack any nearest buildings built. 
