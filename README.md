@@ -1,7 +1,13 @@
 # COMP313-MDDN243-Prototype
 
+## Assets used and imported: Post Processing Stack
+
+## Highlight: Enemy(Giant) AI
+used a mixture of Navmesh and Vector components, the Giant NPC can detect, move towards and attack any nearest buildings built. 
+A successful attack by the giant also "knocks" the giant back as to better represent the attack animation of the enemy, and the delay between collision detections that determines the hitpoints of a building.
+
 # City Smash
- #### Quan Le and Melissa Marriott
+#### Quan Le and Melissa Marriott
 
 ### Genre: Construction-and-Management-Simulation (City builder) come Tower-Defence game 
 
