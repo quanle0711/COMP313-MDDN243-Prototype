@@ -5,11 +5,14 @@
 
 ### Genre: Construction-and-Management-Simulation (City builder) come Tower-Defence game 
 
-## Premise: City Smash is a 3D city building game. The player builds their city at the top of a tiered play area and places defences to protect the city from a raging giant. 
+## Premise: 
+City Smash is a 3D city building game. The player builds their city at the top of a tiered play area and places defences to protect the city from a raging giant. 
 
-## Goal: As a player your goal is to erect a number of buildings (all standing at the same time) before the giant destroys your city or your citizens flee in panic. 
+## Goal:
+As a player your goal is to erect a number of buildings (all standing at the same time) before the giant destroys your city or your citizens flee in panic. 
 
-## Conception and Inspiration: This game was conceived collaboratively using a topic abstraction method that involves picking a commonplace activity from your everyday life, focusing on a single aspect of that activity (i.e. a single action or a set of connected actions) then abstracting this to form a concept. We chose the aspect of precise footwork in the sport of fencing and abstracted this to a giant stepping on buildings, which eventually developed into our game. 
+## Conception and Inspiration:
+This game was conceived collaboratively using a topic abstraction method that involves picking a commonplace activity from your everyday life, focusing on a single aspect of that activity (i.e. a single action or a set of connected actions) then abstracting this to form a concept. We chose the aspect of precise footwork in the sport of fencing and abstracted this to a giant stepping on buildings, which eventually developed into our game. 
 Our game was inspired by the aesthetics of Clash of Clans and Monsters Ate My Condo, random events from Simcity and the impact of panic on players decisions (stress system Darkest Dungeon). 
 
 ## Mechanics and Systems: 
